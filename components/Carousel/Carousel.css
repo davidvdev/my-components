@@ -1,0 +1,36 @@
+.Carousel {
+    padding: 200px 2em;
+    background-color: teal;
+}
+
+.reel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress svg {
+    height: 1em;
+    padding: 8px;
+    fill: white;
+}
+
+img {
+    object-fit: cover;
+    height: 200px;
+    width: 300px;
+}
+
+.button .arrow {
+    height:120px;
+    width: 120px;
+}
+.back .arrow {
+    transform: scaleX(-1);
+}
