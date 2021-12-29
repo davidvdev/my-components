@@ -12,7 +12,7 @@ const Carousel = (props) => {
 
     const advanceReel = (direction) => {
 
-        const max = photos.length
+        const max = photos.length -1
 
         if(direction === "forward"){
             focusPhoto != max ? setFocusPhoto(focusPhoto + 1) : setFocusPhoto(0)
@@ -61,6 +61,7 @@ const Carousel = (props) => {
                                 viewBox="0 0 100 100" 
                                 xmlns="http://www.w3.org/2000/svg"
                                 key={index}
+                                className={index === focusPhoto ? "focus" : ""}
                             >
                                 <circle cx="50" cy="50" r="50"/>
                             </svg>

@@ -21,6 +21,12 @@
     fill: white;
 }
 
+.progress .focus {
+    height: 1.5em;
+    padding: 4px;
+    fill: grey;
+}
+
 img {
     object-fit: cover;
     height: 200px;
@@ -31,6 +37,7 @@ img {
     height:120px;
     width: 120px;
 }
+
 .back .arrow {
     transform: scaleX(-1);
 }
