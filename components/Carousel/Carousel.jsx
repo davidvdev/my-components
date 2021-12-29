@@ -39,7 +39,7 @@ const Carousel = (props) => {
                             src={photo.url} 
                             alt={photo.name} 
                             key={index}
-                            className=""    
+                            className={index === focusPhoto ? "focus" : ""}   
                         />
                         )
                     })

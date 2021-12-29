@@ -33,6 +33,11 @@ img {
     width: 300px;
 }
 
+img.focus {
+    height: 300px;
+    width: 400px;
+}
+
 .button .arrow {
     height:120px;
     width: 120px;
