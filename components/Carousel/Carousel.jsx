@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 import './Carousel.css'
 import './default-data.json'
 import data from './default-data.json'
@@ -6,11 +8,28 @@ import arrow from './button.svg'
 const Carousel = (props) => {
 
     const photos = data
+    const [focusPhoto, setFocusPhoto] = useState(0)
+
+    const advanceReel = (direction) => {
+
+        const max = photos.length
+
+        if(direction === "forward"){
+            focusPhoto != max ? setFocusPhoto(focusPhoto + 1) : setFocusPhoto(0)
+        }
+        else if (direction === "back"){
+            focusPhoto != 0 ? setFocusPhoto(focusPhoto - 1) : setFocusPhoto(max)
+        }
+    }
 
     return (
         <div className="Carousel">
             <div className="reel">
-                <div role="button" className="button back">
+                <div 
+                    role="button" 
+                    className="button back"
+                    onClick={() => advanceReel('back')}
+                >
                     <img src={arrow} className="arrow" alt="back button"/>
                 </div>
 
@@ -26,7 +45,11 @@ const Carousel = (props) => {
                     })
                 }
 
-                <div role="button" className="button forward">
+                <div 
+                    role="button" 
+                    className="button forward"
+                    onClick={() => advanceReel('forward')}    
+                >
                     <img src={arrow} className="arrow" alt="forward button"/>
                 </div>
             </div>
