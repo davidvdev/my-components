@@ -3,7 +3,8 @@ import logo from './logo.svg'
 import './App.css'
 
 // IMPORT COMPONENTS
-import Carousel from '../components/Carousel/Carousel.jsx'
+import { Carousel } from '../components/Carousel/Carousel.jsx'
+import { ToggleGallery } from '../components/ToggleGallery/ToggleGallery.jsx'
 
 function App() {
 
@@ -16,7 +17,7 @@ function App() {
       </header>
       <main>
         <Carousel />
-
+        <ToggleGallery />
       </main>
     </div>
   )

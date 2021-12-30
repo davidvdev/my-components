@@ -88,4 +88,4 @@ const Carousel = (props) => {
     )
 }
 
-export default Carousel
+export { Carousel }

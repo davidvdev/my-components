@@ -1,0 +1,30 @@
+.ToggleGallery {
+    padding: 2em 0;
+    background-color: mediumturquoise;
+}
+
+.container {
+    margin: 0 auto;
+    max-height: 400px;
+    max-width: 80%;
+}
+
+.container img {
+    max-height: inherit;
+    object-fit: contain;
+}
+
+.toggles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toggles svg {
+    height: 6em;
+    padding: 1em;
+}
+
+.toggles svg circle:hover{
+    fill: red;
+}
