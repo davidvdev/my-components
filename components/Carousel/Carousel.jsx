@@ -1,8 +1,7 @@
 import { useState } from 'react'
 
 import './Carousel.css'
-import './default-data.json'
-import data from './default-data.json'
+import data from '../data/images.json'
 import arrow from './button.svg'
 
 const Carousel = (props) => {
@@ -16,9 +15,11 @@ const Carousel = (props) => {
 
         if(direction === "forward"){
             focusPhoto != max ? setFocusPhoto(focusPhoto + 1) : setFocusPhoto(0)
+            photos.splice(max, 0, photos.shift())
         }
         else if (direction === "back"){
             focusPhoto != 0 ? setFocusPhoto(focusPhoto - 1) : setFocusPhoto(max)
+            photos.splice(0, 0, photos.pop())
         }
     }
 
@@ -68,6 +69,20 @@ const Carousel = (props) => {
                         )
                     })
                 }
+                {/* {
+                    photos.map((photo, index) => {
+                        return (
+                            <svg 
+                                viewBox="0 0 100 100" 
+                                xmlns="http://www.w3.org/2000/svg"
+                                key={index}
+                                className={index === focusPhoto ? "focus" : ""}
+                            >
+                                <circle cx="50" cy="50" r="50"/>
+                            </svg>
+                        )
+                    })
+                } */}
             </div>
         </div>
     )

@@ -34,16 +34,19 @@
     fill: grey;
 }
 
-img {
+.reelPhotos img {
     object-fit: cover;
     height: 200px;
     width: 300px;
+    opacity: 20%;
+    /* transition: all 1s; */
 }
 
 img.focus {
     height: 300px;
     width: 400px;
     order: -1;
+    opacity: 100%;
 }
 
 .button .arrow {
@@ -53,4 +56,9 @@ img.focus {
 
 .back .arrow {
     transform: scaleX(-1);
+}
+
+@keyframes fade {
+    0% {opacity: 20%;}
+    100% {opacity: 100%;}
 }
