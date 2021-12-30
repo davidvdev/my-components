@@ -7,6 +7,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+}
+
+.reelPhotos {
+    width: 68%;
+    display: flex;
+    overflow: hidden;
 }
 
 .progress {
@@ -36,6 +43,7 @@ img {
 img.focus {
     height: 300px;
     width: 400px;
+    order: -1;
 }
 
 .button .arrow {

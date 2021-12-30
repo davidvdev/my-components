@@ -32,7 +32,7 @@ const Carousel = (props) => {
                 >
                     <img src={arrow} className="arrow" alt="back button"/>
                 </div>
-
+                <div className="reelPhotos">
                 { photos.map((photo, index) => {
                     return (
                         <img 
@@ -44,7 +44,7 @@ const Carousel = (props) => {
                         )
                     })
                 }
-
+                </div>
                 <div 
                     role="button" 
                     className="button forward"
