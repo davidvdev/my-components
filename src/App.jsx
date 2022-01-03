@@ -16,7 +16,9 @@ function App() {
         <img src={logo} className="App-logo" alt="spinning React logo" />
       </header>
       <main>
+        <h2>Image Carousel</h2>
         <Carousel />
+        <h2>Image Toggle Gallery</h2>
         <ToggleGallery />
       </main>
     </div>
