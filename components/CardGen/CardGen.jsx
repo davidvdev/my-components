@@ -1,5 +1,10 @@
 import { useState } from 'react'
 
+import './CardGen.css'
+
+import { Card } from './Card'
+
+
 const CardGen = () => {
 
     const [suit, setSuit] = useState('')
@@ -82,16 +87,11 @@ const CardGen = () => {
             </form>
         </div>
         <div className="card-tableau">
-            { deck.map(card => (
-                <div className="playing-card">
-                    { card.face ? (
-                            <h1>{card.face}</h1>
-                        ) : (
-                            <h1>{card.cardValue}</h1>
-                        )
-                    }
-                    <h2>{card.suit}</h2>
-                </div>
+            { deck.map((card,index) => (
+                <Card 
+                    card={card} 
+                    key={index}
+                />
             ))}
         </div>
         </>

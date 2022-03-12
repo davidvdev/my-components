@@ -1,0 +1,23 @@
+.playing-card {
+  background-color: white;
+  background-image: url("https://i.imgur.com/iSqcRcw.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 1em;
+  box-shadow: 0.25em 0.25em 0.25em black;
+  margin: 1em;
+  transition: transform 0.5s;
+  height: 300px;
+  width: 200px;
+}
+
+.flipped {
+  background-color: white;
+  background-image: url("https://i.imgur.com/0FvoNim.png");
+}
+
+.playing-card:hover {
+  box-shadow: 0.5em 0.5em 0.5em black;
+  cursor: pointer;
+  transform: scale(1.05);
+}
