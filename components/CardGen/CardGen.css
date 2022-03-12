@@ -1,3 +1,8 @@
+.card-tableau {
+    padding: 2em;
+    background-color: maroon;
+}
+
 .playing-card {
   background-color: white;
   background-image: url("https://i.imgur.com/iSqcRcw.png");
@@ -13,7 +18,7 @@
 
 .flipped {
   background-color: white;
-  background-image: url("https://i.imgur.com/0FvoNim.png");
+  background-image: none;
 }
 
 .playing-card:hover {

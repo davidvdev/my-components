@@ -7,18 +7,19 @@ const Card = (props) => {
 
     const cardFlip = (e) => {
         setTimeout(() => setIsFlipped(!isFlipped),100)
-        thisCard = e.currentTarget
+        console.log(e)
+        const thisCard = e
         thisCard.style.transform === "" 
             ? thisCard.style.transform = "rotateY(180deg)" 
             : thisCard.style.transform = ""
-            
+
         thisCard.style.transitionDuration = "0.5s"
     }
 
     return(
         <div 
             className={isFlipped ? "flipped playing-card" : "playing-card"}
-            onClick={(e) => cardFlip(e)}
+            onClick={(e) => cardFlip(e.currentTarget)}
         >
             { card.face ? (
                     <h1>{card.face}</h1>
