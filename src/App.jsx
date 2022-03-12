@@ -5,6 +5,7 @@ import './App.css'
 // IMPORT COMPONENTS
 import { Carousel } from '../components/Carousel/Carousel.jsx'
 import { ToggleGallery } from '../components/ToggleGallery/ToggleGallery.jsx'
+import { CardGen } from '../components/CardGen/CardGen.jsx'
 
 function App() {
 
@@ -20,6 +21,8 @@ function App() {
         <Carousel />
         <h2>Image Toggle Gallery</h2>
         <ToggleGallery />
+        <h2>Card Generator</h2>
+        <CardGen />
       </main>
     </div>
   )

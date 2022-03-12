@@ -28,7 +28,7 @@ const ToggleGallery = (props) => {
     return (
         <div className="ToggleGallery">
             <div className="container">
-                <img src={focusPhoto.url} alt={focusPhoto.name} />
+                <img src={focusPhoto.url} alt={focusPhoto.name}/>
             </div>
             <div className='toggles'>
                 { createButtons(quantity).map(item => item)}
