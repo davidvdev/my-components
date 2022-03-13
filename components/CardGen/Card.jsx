@@ -1,5 +1,8 @@
 import { useState } from 'react'
 import clubs from './clubs.svg'
+import hearts from './hearts.svg'
+import spades from './spades.svg'
+import diamonds from './diamonds.svg'
 
 
 const Card = (props) => {
@@ -13,10 +16,10 @@ const Card = (props) => {
         queen: "Q"
     }
     const suitKey = {
-        hearts: "",
-        spades: "SPADES",
+        hearts: hearts,
+        spades: spades,
         clubs: clubs,
-        diamonds: ""
+        diamonds: diamonds
     }
 
     const cardFlip = (e) => {
