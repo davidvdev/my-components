@@ -21,6 +21,20 @@ const CardGen = () => {
         isFace ? setDeck([...deck, {suit, face}]) : setDeck([...deck, {suit, cardValue}])
     }
 
+    const randomDraw = () => {
+        const randCard = {
+            suit: (suits[Math.floor(Math.random() * suits.length)]),
+            face: (faces[Math.floor(Math.random() * faces.length)]),
+            isFace: (Math.random() > 0.5 ? true : false),
+            cardValue: (Math.ceil(Math.random() * 10))
+        }
+
+        randCard.isFace ? 
+            setDeck([...deck, {suit: randCard.suit, face: randCard.face}]) 
+            : setDeck([...deck, {suit: randCard.suit, cardValue: randCard.cardValue}])
+
+    }
+
     console.log(isFace)
 
     return (
@@ -85,6 +99,7 @@ const CardGen = () => {
                         <input role="button" type="submit" value="deal!"/> 
                     }
             </form>
+            <button onClick={() => randomDraw()}>Random Deal</button>
         </div>
         <div className="card-tableau">
             { deck.map((card,index) => (

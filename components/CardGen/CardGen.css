@@ -36,6 +36,7 @@
 }
 
 .shorthand {
+    z-index: 2;
     position: absolute;
 }
 
@@ -56,7 +57,9 @@
 }
 
 .card-art {
+    position: relative;
     width: 75%;
+    z-index: 1;
 }
 
 .flipped {
