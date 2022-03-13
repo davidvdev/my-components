@@ -53,8 +53,19 @@ const Card = (props) => {
 
     const numCard = () => (
         <div className='inner-card'>
-            <h1>{card.cardValue}</h1>
-            <img src={suitKey[card.suit]} alt="" />
+            <div className="shorthand upper">
+                <h1>{card.cardValue}</h1>
+                <img src={suitKey[card.suit]} alt="" />
+            </div>
+            <img 
+                className='card-art'
+                src="https://i.imgur.com/iSqcRcw.png" 
+                alt="" 
+            />
+            <div className="shorthand lower">
+                <h1>{card.cardValue}</h1>
+                <img src={suitKey[card.suit]} alt="" />
+            </div>
         </div>
     )
 
