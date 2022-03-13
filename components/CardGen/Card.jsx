@@ -36,7 +36,7 @@ const Card = (props) => {
     const faceCard = () => (
         <div className="inner-card">
             <div className="shorthand upper">
-                <h1>{faceKey[card.face]}</h1>
+                <p>{faceKey[card.face]}</p>
                 <img src={suitKey[card.suit]} alt="" />
             </div>
             <img 
@@ -45,7 +45,7 @@ const Card = (props) => {
                 alt="" 
             />
             <div className="shorthand lower">
-                <h1>{faceKey[card.face]}</h1>
+                <p>{faceKey[card.face]}</p>
                 <img src={suitKey[card.suit]} alt="" />
             </div>
         </div>
@@ -54,7 +54,7 @@ const Card = (props) => {
     const numCard = () => (
         <div className='inner-card'>
             <div className="shorthand upper">
-                <h1>{card.cardValue}</h1>
+                <p>{card.cardValue}</p>
                 <img src={suitKey[card.suit]} alt="" />
             </div>
             <img 
@@ -63,7 +63,7 @@ const Card = (props) => {
                 alt="" 
             />
             <div className="shorthand lower">
-                <h1>{card.cardValue}</h1>
+                <p>{card.cardValue}</p>
                 <img src={suitKey[card.suit]} alt="" />
             </div>
         </div>
