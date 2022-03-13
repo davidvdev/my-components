@@ -17,11 +17,11 @@ function App() {
         <img src={logo} className="App-logo" alt="spinning React logo" />
       </header>
       <main>
-        <h2>Image Carousel</h2>
+        <h2 id="img-car">Image Carousel</h2>
         <Carousel />
-        <h2>Image Toggle Gallery</h2>
+        <h2 id="img-toggle">Image Toggle Gallery</h2>
         <ToggleGallery />
-        <h2>Card Generator</h2>
+        <h2 id="card-gen">Card Generator</h2>
         <CardGen />
       </main>
     </div>

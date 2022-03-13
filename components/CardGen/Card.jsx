@@ -35,8 +35,19 @@ const Card = (props) => {
 
     const faceCard = () => (
         <div className="inner-card">
-            <h1>{faceKey[card.face]}</h1>
-            <img src={suitKey[card.suit]} alt="" />
+            <div className="shorthand upper">
+                <h1>{faceKey[card.face]}</h1>
+                <img src={suitKey[card.suit]} alt="" />
+            </div>
+            <img 
+                className='card-art'
+                src="https://i.imgur.com/iSqcRcw.png" 
+                alt="" 
+            />
+            <div className="shorthand lower">
+                <h1>{faceKey[card.face]}</h1>
+                <img src={suitKey[card.suit]} alt="" />
+            </div>
         </div>
     )
 

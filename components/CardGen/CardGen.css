@@ -22,9 +22,41 @@
 }
 
 .inner-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 95%;
     width: 95%;
-    border: 1px solid red;
+}
+
+.inner-card > * {
+    padding: 0;
+    margin: 0;
+}
+
+.shorthand {
+    position: absolute;
+}
+
+.shorthand h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.upper {
+    top: 0;
+    left: 0;
+}
+
+.lower {
+    bottom: 0;
+    right: 0;
+    transform: rotateX(180deg);
+}
+
+.card-art {
+    width: 75%;
 }
 
 .flipped {
