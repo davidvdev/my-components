@@ -35,8 +35,6 @@ const CardGen = () => {
 
     }
 
-    console.log(isFace)
-
     return (
         <>
         <div className="card-form">

@@ -21,6 +21,7 @@ const Card = (props) => {
         clubs: clubs,
         diamonds: diamonds
     }
+    const shape = suitKey[card.suit]
 
     const cardFlip = (e) => {
         setTimeout(() => setIsFlipped(!isFlipped),100)
@@ -32,6 +33,106 @@ const Card = (props) => {
 
         thisCard.style.transitionDuration = "0.5s"
     }
+
+    const num = Number(card.cardValue)
+    const layout = []
+    switch (num) {
+        case 1:
+            layout.push({gridColumn: "2", gridRow: "4"})
+            break;
+        case 2:
+            layout.push(
+                {gridColumn: "2", gridRow: "1"},
+                {gridColumn: "2", gridRow: "7"}
+            )
+            break;
+        case 3:
+            layout.push(
+                {gridColumn: "2", gridRow: "1"},
+                {gridColumn: "2", gridRow: "7"},
+                {gridColumn: "2", gridRow: "4"}
+            )
+            break;
+        case 4:
+            layout.push(
+                {gridColumn: "1", gridRow: "1"},
+                {gridColumn: "1", gridRow: "7"},
+                {gridColumn: "3", gridRow: "1"},
+                {gridColumn: "3", gridRow: "7"}
+            )
+            break;
+        case 5:
+            layout.push(
+                {gridColumn: "2", gridRow: "4"},
+                {gridColumn: "1", gridRow: "1"},
+                {gridColumn: "1", gridRow: "7"},
+                {gridColumn: "3", gridRow: "1"},
+                {gridColumn: "3", gridRow: "7"}
+            )
+            break;
+        case 6:
+            layout.push(
+                {gridColumn: "1", gridRow: "1"},
+                {gridColumn: "1", gridRow: "4"},
+                {gridColumn: "1", gridRow: "7"},
+                {gridColumn: "3", gridRow: "1"},
+                {gridColumn: "3", gridRow: "4"},
+                {gridColumn: "3", gridRow: "7"}
+            )
+            break;
+        case 7:
+            layout.push(
+                {gridColumn: "1", gridRow: "1"},
+                {gridColumn: "1", gridRow: "4"},
+                {gridColumn: "1", gridRow: "7"},
+                {gridColumn: "3", gridRow: "1"},
+                {gridColumn: "3", gridRow: "4"},
+                {gridColumn: "3", gridRow: "7"},
+                {gridColumn: "2", gridRow: "2"}
+            )
+            break;
+        case 8:
+            layout.push(
+                {gridColumn: "1", gridRow: "1"},
+                {gridColumn: "1", gridRow: "4"},
+                {gridColumn: "1", gridRow: "7"},
+                {gridColumn: "3", gridRow: "1"},
+                {gridColumn: "3", gridRow: "4"},
+                {gridColumn: "3", gridRow: "7"},
+                {gridColumn: "2", gridRow: "2"},
+                {gridColumn: "2", gridRow: "6"}
+            )
+            break;
+        case 9:
+            layout.push(
+                {gridColumn: "1", gridRow: "1"},
+                {gridColumn: "1", gridRow: "3"},
+                {gridColumn: "1", gridRow: "5"},
+                {gridColumn: "1", gridRow: "7"},
+                {gridColumn: "3", gridRow: "1"},
+                {gridColumn: "3", gridRow: "3"},
+                {gridColumn: "3", gridRow: "5"},
+                {gridColumn: "3", gridRow: "7"},
+                {gridColumn: "2", gridRow: "4"}
+            )
+            break;
+        case 10:
+            layout.push(
+                {gridColumn: "1", gridRow: "1"},
+                {gridColumn: "1", gridRow: "3"},
+                {gridColumn: "1", gridRow: "5"},
+                {gridColumn: "1", gridRow: "7"},
+                {gridColumn: "2", gridRow: "2"},
+                {gridColumn: "2", gridRow: "6"},
+                {gridColumn: "3", gridRow: "1"},
+                {gridColumn: "3", gridRow: "3"},
+                {gridColumn: "3", gridRow: "5"},
+                {gridColumn: "3", gridRow: "7"},
+            )
+            break;
+        default:
+            break;
+    } 
 
     const faceCard = () => (
         <div className="inner-card">
@@ -57,11 +158,11 @@ const Card = (props) => {
                 <p>{card.cardValue}</p>
                 <img src={suitKey[card.suit]} alt="" />
             </div>
-            <img 
-                className='card-art'
-                src="https://i.imgur.com/iSqcRcw.png" 
-                alt="" 
-            />
+            <div className="pips">
+                {layout.map((item, index) => (
+                    <img key={index} src={shape} alt="pip" style={item}/>
+                ))}    
+            </div>
             <div className="shorthand lower">
                 <p>{card.cardValue}</p>
                 <img src={suitKey[card.suit]} alt="" />

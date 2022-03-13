@@ -69,6 +69,20 @@
     z-index: 1;
 }
 
+.pips {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    width: 75%;
+    height: 75%;
+}
+
+.pips img {
+    place-self: center;
+    width: 24px;
+    height: 24px;
+}
+
 .flipped {
   background-color: white;
   background-image: none;
