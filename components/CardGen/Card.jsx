@@ -1,4 +1,7 @@
 import { useState } from 'react'
+import clubs from './clubs.svg'
+
+
 const Card = (props) => {
 
     const [isFlipped, setIsFlipped] = useState(true)
@@ -11,8 +14,8 @@ const Card = (props) => {
     }
     const suitKey = {
         hearts: "",
-        spades: "",
-        clubs: "",
+        spades: "SPADES",
+        clubs: clubs,
         diamonds: ""
     }
 
@@ -28,16 +31,16 @@ const Card = (props) => {
     }
 
     const faceCard = () => (
-        <div className="innercard">
+        <div className="inner-card">
             <h1>{faceKey[card.face]}</h1>
-            <h2>{card.suit}</h2>
+            <img src={suitKey[card.suit]} alt="" />
         </div>
     )
 
     const numCard = () => (
-        <div className='innerCard'>
-            <h2>{card.suit}</h2>
+        <div className='inner-card'>
             <h1>{card.cardValue}</h1>
+            <img src={suitKey[card.suit]} alt="" />
         </div>
     )
 
