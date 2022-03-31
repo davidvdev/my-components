@@ -135,7 +135,7 @@ const Card = (props) => {
     } 
 
     const faceCard = () => (
-        <div className="inner-card">
+        <div className="inner-card" style={card.suit === 'diamonds' || card.suit  === 'hearts' ? {color: 'red'}:{color: 'black'}}>
             <div className="shorthand upper">
                 <p>{faceKey[card.face]}</p>
                 <img src={suitKey[card.suit]} alt="" />
@@ -153,7 +153,7 @@ const Card = (props) => {
     )
 
     const numCard = () => (
-        <div className='inner-card'>
+        <div className='inner-card' style={card.suit === 'diamonds' || card.suit  === 'hearts' ? {color: 'red'}:{color: 'black'}}>
             <div className="shorthand upper">
                 <p>{card.cardValue}</p>
                 <img src={suitKey[card.suit]} alt="" />

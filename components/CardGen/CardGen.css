@@ -1,3 +1,14 @@
+.card-form {
+    background-color: maroon;
+    color: white;
+    font-weight: 800;
+    padding: 1em;
+}
+
+.card-form form > * {
+    margin: 0.5em;
+}
+
 .card-tableau {
     display: flex;
     flex-wrap: wrap;
