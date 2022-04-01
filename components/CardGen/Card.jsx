@@ -38,7 +38,9 @@ const Card = (props) => {
     const layout = []
     switch (num) {
         case 1:
-            layout.push({gridColumn: "2", gridRow: "4"})
+            layout.push(
+                {gridColumn: "2", gridRow: "4"}
+            )
             break;
         case 2:
             layout.push(
@@ -160,7 +162,7 @@ const Card = (props) => {
             </div>
             <div className="pips">
                 {layout.map((item, index) => (
-                    <img key={index} src={shape} alt="pip" style={item}/>
+                    <img key={index} src={shape} alt="" style={item}/>
                 ))}    
             </div>
             <div className="shorthand lower">
@@ -174,6 +176,8 @@ const Card = (props) => {
         <div 
             className={isFlipped ? "flipped playing-card" : "playing-card"}
             onClick={(e) => cardFlip(e.currentTarget)}
+            role="img"
+            alt={!isFlipped? "card back" : card.face ? `${card.face} of ${card.suit}` : `${card.cardValue} of ${card.suit}`}
         >
             {!isFlipped ? null : (card.face ? faceCard() : numCard())}
         </div>
