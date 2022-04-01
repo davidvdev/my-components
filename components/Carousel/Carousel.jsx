@@ -4,7 +4,7 @@ import './Carousel.css'
 import data from '../data/images.json'
 import arrow from './button.svg'
 
-const Carousel = (props) => {
+const Carousel = () => {
 
     const photos = data
     const [focusPhoto, setFocusPhoto] = useState(0)
@@ -15,11 +15,11 @@ const Carousel = (props) => {
 
         if(direction === "forward"){
             focusPhoto != max ? setFocusPhoto(focusPhoto + 1) : setFocusPhoto(0)
-            photos.splice(max, 0, photos.shift())
+            // photos.splice(max, 0, photos.shift())
         }
         else if (direction === "back"){
             focusPhoto != 0 ? setFocusPhoto(focusPhoto - 1) : setFocusPhoto(max)
-            photos.splice(0, 0, photos.pop())
+            // photos.splice(0, 0, photos.pop())
         }
     }
 
@@ -39,7 +39,7 @@ const Carousel = (props) => {
                         <img 
                             src={photo.url} 
                             alt={photo.name} 
-                            key={index}
+                            key={photo.name}
                             className={index === focusPhoto ? "focus" : ""}   
                         />
                         )
